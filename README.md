@@ -30,41 +30,45 @@ You just need to add the following line in your root package.json.
 
 ##### 6. Configure Webpack
 Next you need to edit the webpack configuration to look into the right locations. All path configurations are found in the `config/paths.js` file.
-You will only need to edit the **appIndexJs** and **appSrc** variables
-`module.exports = {
-  ...
-  appIndexJs: resolveApp('packages/app/index.js'),
-  ...
-  appSrc: resolveApp('packages'),
-  ...
-};`
+You will only need to edit the **appIndexJs** and **appSrc** variables.
+
+
+
+    module.exports = {
+      ...
+      appIndexJs: resolveApp('packages/app/index.js'),
+      ...
+      appSrc: resolveApp('packages'),
+      ...
+    };
 
 ##### 7. Install
 Finally, run `yarn install` somewhere, ideally inside the workspace root. All your project dependencies will be installed together, giving Yarn more latitude to better optimize them.
 
 If everything works well, you should now have a similar file hierarchy:
-  - config
-  - node_modules
-  - packages
-    - app
-      - App.css
-      - App.js
-      - App.test.js
-      - index.css
-      - index.js
-      - logo.svg
-      - package.json
-      - registerServiceWorker.js
-    - package-alpha
-      - index.js
-      - package.json
-    - package-beta
-      - index.js
-      - package.json
-  - public
-  - scripts
-  - .gitignore
-  - package.json
+
+    - config
+    - node_modules
+    - packages
+      - app
+        - App.css
+        - App.js
+        - App.test.js
+        - index.css
+        - index.js
+        - logo.svg
+        - package.json
+        - registerServiceWorker.js
+      - package-alpha
+        - index.js
+        - package.json
+      - package-beta
+        - index.js
+        - package.json
+    - public
+    - scripts
+    - .gitignore
+    - package.json
 
 ##### 8. Run your code
 - `yarn start` Comes from create-react-app and will start a webpackDevServer at http://localhost:3000/ with hot reloading and the whole shebang
