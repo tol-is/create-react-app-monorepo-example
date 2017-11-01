@@ -33,7 +33,6 @@ Next you need to edit the webpack configuration to look into the right locations
 You will only need to edit the **appIndexJs** and **appSrc** variables.
 
 
-
     module.exports = {
       ...
       appIndexJs: resolveApp('packages/app/index.js'),
