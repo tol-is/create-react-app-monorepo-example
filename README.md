@@ -31,13 +31,13 @@ You just need to add the following line in your root package.json.
 ##### 6. Configure Webpack
 Next you need to edit the webpack configuration to look into the right locations. All path configurations are found in the `config/paths.js` file.
 You will only need to edit the **appIndexJs** and **appSrc** variables
-`module.exports = {
-  ...
-  appIndexJs: resolveApp('packages/app/index.js'),
-  ...
-  appSrc: resolveApp('packages'),
-  ...
-};`
+  module.exports = {
+    ...
+    appIndexJs: resolveApp('packages/app/index.js'),
+    ...
+    appSrc: resolveApp('packages'),
+    ...
+  };
 
 ##### 7. Install
 Finally, run `yarn install` somewhere, ideally inside the workspace root. All your project dependencies will be installed together, giving Yarn more latitude to better optimize them.
