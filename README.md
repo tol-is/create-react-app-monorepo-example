@@ -17,7 +17,7 @@ Workspaces are stable enough to be used in large-scale applications and shouldnâ
 - `yarn eject`
 
 ##### 4. Enable yarn workspaces
-- `yarn workspaces-experimental true`
+- `yarn config set workspaces-experimental true`
 
 ##### Create packages directory
 - Create your `/packages` in the root directory or anywhere you want them to be.
