@@ -17,10 +17,7 @@ Workspaces are stable enough to be used in large-scale applications and shouldnâ
 - `yarn eject`
 
 ##### 4. Enable yarn workspaces
-- `yarn config set workspaces-experimental true`
-
-##### Create packages directory
-- Create your `/packages` in the root directory or anywhere you want them to be.
+- Create a .yarnrc file with the line `workspaces-experimental true`
 
 ##### 5. Configure workspace in package.json
 You just need to add the following line in your root package.json.
@@ -28,9 +25,19 @@ You just need to add the following line in your root package.json.
     "packages/*"
 ]`
 
-##### 6. Configure Webpack
-Next you need to edit the webpack configuration to look into the right locations. All path configurations are found in the `config/paths.js` file.
-You will only need to edit the **appIndexJs** and **appSrc** variables.
+##### 6. Create packages directory
+- Create your `/packages` in the root directory or anywhere you want them to be.
+
+##### 7. Make a directory for the entry app
+- In your packages directory, create an directory of your choise **app**, **main**, **entry** are common choices.
+- `cd packages/app`
+- `npm init` to create a package.json
+- `yarn add react` and `yarn add react-dom` to install dependencies of the main app
+
+##### 8. Configure Webpack
+-Next you need to edit the webpack configuration to look into the right locations.
+-All path configurations are found in the `config/paths.js` file.
+-You will only need to edit the **appIndexJs** and **appSrc** variables.
 
 
     module.exports = {
@@ -41,7 +48,7 @@ You will only need to edit the **appIndexJs** and **appSrc** variables.
       ...
     };
 
-##### 7. Install
+##### 9. Install
 Finally, run `yarn install` somewhere, ideally inside the workspace root. All your project dependencies will be installed together, giving Yarn more latitude to better optimize them.
 
 If everything works well, you should now have a similar file hierarchy:
@@ -69,8 +76,8 @@ If everything works well, you should now have a similar file hierarchy:
     - .gitignore
     - package.json
 
-##### 8. Run your code
+##### 10. Run your code
 - `yarn start` Comes from create-react-app and will start a webpackDevServer at http://localhost:3000/ with hot reloading and the whole shebang
 
-##### 9. Build
+##### 11. Build
 - `yarn build` Creates a production build in the `/build` directory
