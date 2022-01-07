@@ -1,0 +1,50 @@
+version: 2
+updates:
+  # Keep npm dependencies up to date
+  - package-ecosystem: javascript
+    directory: /
+    schedule:
+    interval: daily
+    #   time: '14:00'
+    #   timezone: 'CET'
+    # pull-request-branch-name:
+    #   separator: '/'
+    # open-pull-requests-limit: 20
+    # labels:
+    #   - '🤖-Dependabot'
+    #   - 'automerge'
+    #   - 'root level dependencies'
+    #   - 'security vulnerability'
+    #   - 'squad: frontend-infrastructure'
+    #   - 'tribe: conversions'
+    #   - 'type: bug'
+    # commit-message:
+    #   # Prefix all commit messages with "npm"
+    #   prefix: '(fix) update'
+    # ignore:
+    #   - dependency-name: '*'
+    #     update-types: ['version-update:semver-major']
+
+  # - package-ecosystem: npm
+  #   directory: '/toolbox'
+  #   schedule:
+  #     interval: daily
+  #     time: '14:00'
+  #     timezone: 'CET'
+  #   pull-request-branch-name:
+  #     separator: '/'
+  #   open-pull-requests-limit: 20
+  #   labels:
+  #     - '🤖-Dependabot'
+  #     - 'automerge'
+  #     - 'toolbox dependencies'
+  #     - 'security vulnerability'
+  #     - 'squad: frontend-infrastructure'
+  #     - 'tribe: conversions'
+  #     - 'type: bug'
+  #   commit-message:
+  #     # Prefix all commit messages with "npm"
+  #     prefix: '(fix) update'
+  #   ignore:
+  #     - dependency-name: '*'
+  #       update-types: ['version-update:semver-major']
